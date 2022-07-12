@@ -1,3 +1,30 @@
+body {
+  display: flex;
+  flex: 1;
+  flex-flow: row wrap;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
 
+.side {
+  background-image: url(/images/background.jpg);
+  background-size: cover;
+  display: flex;
+  flex: 1;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+.side h1 {
+  color: white;
+  font-size: 2rem;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  width: clamp(450px, 35%, 45%); /* Make sidebar fit 100% width for mobile*/
+}
+.side h1 img {
+  width: 100px;
+}
 
 /*# sourceMappingURL=style.css.map */
