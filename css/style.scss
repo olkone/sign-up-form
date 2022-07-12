@@ -1,38 +1,228 @@
 body{
+    box-sizing: border-box;
     display: flex;
     flex: 1;
     flex-flow: row wrap;
     height: 100vh;
+    width: 100vw;
     margin: 0;
     padding: 0;
+
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .section {
+    display: flex;
+    flex: 1 1 0%;
+    flex-flow: column wrap;
+    position: relative;
 
 }
 
 .side {
+    align-items: center;
     background-image: url(/images/background.jpg);
     background-size: cover;
-
-    display: flex;
-    flex: 1;
-    flex-flow: column nowrap;
+    flex: 1 1 300px;
     justify-content: space-between;
-    
 
-    h1 {
+    #title {
+        background-color: rgba(0, 0, 0, 0.521);
         color: white;
-        font-size: min(2rem, 3rem);
+        height: max-content;
+        width: 100%;
+        margin: 25vh 0;
+        padding: 10px 0;
 
         display: flex;
-        flex: 1;
+        flex-flow: row wrap;
+        flex: 0;
         align-items: center;
+        gap: 10px;
+        justify-content: center;
+        text-align: center;
 
-        width: clamp(450px, 35%, 45%); /* Make sidebar fit 100% width for mobile*/
-
+        h1 {
+            font-size: 2rem;    
+        }
+        
         img {
-            width: min(100px, 200px);
+            width: 60px;
+        }
+    }
+
+    p, 
+    a {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 0.85rem;
+        margin: 10px 0;
+    }
+}
+
+.form-section {
+    background-color: rgb(247, 247, 247);
+
+    align-items: left;
+    display: flex;
+    flex: 2 2 400px;
+    flex-flow: column nowrap;
+    gap: 20px;
+    justify-content: space-between;
+
+    p {
+        color: darkslategrey;
+        font-size: max(1rem, 1.3rem);
+        font-weight: bold;
+        padding-left: 4%;
+        width: min(650px, 90%)
+    }
+
+    p:first-of-type {
+        margin-top: 12%;
+    }
+
+    p:last-of-type, a {
+        color: darkslategrey;
+        font-size: max(0.75rem, 1rem);
+        font-weight: 200;
+    }
+
+    form {
+
+        #input-container {
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.171);
+            padding: 2% 4%;
+            width: auto;
+
+            display: grid;
+            grid-template-columns: repeat(2, min(350px, 48%));
+            grid-template-rows: repeat(4, 1fr);
+            grid-column-gap: -30px;
+            grid-row-gap: 5px;
+
+            label,
+            input {
+                display: block;
+                width: max(150px, 90%);
+            }
+
+            label {
+                color:rgb(100, 100, 100);
+                font-size: 0.8rem;
+                letter-spacing: 1px;
+                margin-bottom: 2px;
+                text-transform: uppercase;
+            }
+
+            input {
+                border: 1px solid rgb(226, 226, 226);
+                border-radius: 4px;
+                height: 1.75rem;
+
+                color: rgb(59, 59, 59);
+                font-size: 1rem;
+                font-weight: lighter;
+            }
+
+            *:focus {
+                outline: none;
+                border: 2px solid rgb(147, 227, 151);
+                box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.304);
+            }
+
+            .error {
+                border: 1px solid red;
+            }
+
+            h2 {
+                grid-area: 1 / 1 / 1 / 2;
+
+                font-size: 1.4rem;
+                font-weight: 100;
+            }
+
+            #first-name {
+                grid-area: 2 / 1;
+            }
+
+            #last-name {
+                grid-area: 2 / 2;
+            }
+            
+            #email {
+                grid-area: 3 / 1;
+            }
+
+            #phone {
+                grid-area: 3 / 2; 
+            }
+            
+            #password {
+                grid-area: 4 / 1;
+            }
+
+            #conf-pass {
+                grid-area: 4 / 2;
+            }
+        }
+
+        button {
+            background-color: rgb(67, 112, 66);
+            border: none;
+            border-radius: 5px;
+            color: white;
+            margin: 20px 4%;
+            height: 40px;
+            width: 180px;
+        }
+
+        button:hover {
+            background-color: darken(rgb(67, 112, 66), 5%);
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.318);
+            cursor: pointer;
+        }
+
+        button:active {
+            background-color: darken(rgb(67, 112, 66), 15%);
+        }
+    }
+
+    footer {
+        align-items: center;
+        display: flex;
+        flex: 1;
+        flex-flow: row wrap;
+        gap: 10px;
+        justify-content: center;
+        justify-self: flex-end;
+        margin: 0 auto;
+        height: 30px;
+        width: 100%;
+
+        font-family: 'Inconsolata', 'Courier New', Courier, monospace;
+    
+        p,
+        a {
+            color: rgb(66, 109, 72);
+            font-size: 0.85rem;
+            margin: 10px 0;
+            width: max-content;
+        }
+    
+        img {
+            height: 20px;
+            width: auto;
+        }
+    
+        a:hover {
+            color: rgb(147, 227, 151);
+            transition-duration: 250ms;
+        }
+    
+        img:hover {
+            transform: scale(1.15);
+            transition-duration: 250ms;
         }
     }
 }
