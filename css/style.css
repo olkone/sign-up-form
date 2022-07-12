@@ -155,35 +155,34 @@ body {
 .form-section form button:active {
   background-color: #264026;
 }
-.form-section footer {
+
+footer {
   align-items: center;
   display: flex;
   flex: 1;
   flex-flow: row wrap;
-  gap: 10px;
   justify-content: center;
-  justify-self: flex-end;
   margin: 0 auto;
-  height: 30px;
   width: 100%;
   font-family: "Inconsolata", "Courier New", Courier, monospace;
 }
-.form-section footer p,
-.form-section footer a {
+footer p,
+footer a {
   color: rgb(66, 109, 72);
   font-size: 0.85rem;
   margin: 10px 0;
+  text-align: center;
   width: max-content;
 }
-.form-section footer img {
+footer img {
   height: 20px;
   width: auto;
 }
-.form-section footer a:hover {
+footer a:hover {
   color: rgb(147, 227, 151);
   transition-duration: 250ms;
 }
-.form-section footer img:hover {
+footer img:hover {
   transform: scale(1.15);
   transition-duration: 250ms;
 }

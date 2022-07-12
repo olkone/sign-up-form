@@ -188,41 +188,39 @@ body{
         }
     }
 
-    footer {
-        align-items: center;
-        display: flex;
-        flex: 1;
-        flex-flow: row wrap;
-        gap: 10px;
-        justify-content: center;
-        justify-self: flex-end;
-        margin: 0 auto;
-        height: 30px;
-        width: 100%;
+}
+footer {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
 
-        font-family: 'Inconsolata', 'Courier New', Courier, monospace;
+    font-family: 'Inconsolata', 'Courier New', Courier, monospace;
     
-        p,
-        a {
-            color: rgb(66, 109, 72);
-            font-size: 0.85rem;
-            margin: 10px 0;
-            width: max-content;
-        }
-    
-        img {
-            height: 20px;
-            width: auto;
-        }
-    
-        a:hover {
-            color: rgb(147, 227, 151);
-            transition-duration: 250ms;
-        }
-    
-        img:hover {
-            transform: scale(1.15);
-            transition-duration: 250ms;
-        }
+    p,
+    a {
+        color: rgb(66, 109, 72);
+        font-size: 0.85rem;
+        margin: 10px 0;
+        text-align: center;
+        width: max-content;
+    }
+
+    img {
+        height: 20px;
+        width: auto;
+    }
+
+    a:hover {
+        color: rgb(147, 227, 151);
+        transition-duration: 250ms;
+    }
+
+    img:hover {
+        transform: scale(1.15);
+        transition-duration: 250ms;
     }
 }
