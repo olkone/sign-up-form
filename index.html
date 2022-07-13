@@ -21,40 +21,42 @@
         <form method="post">
             <div id="input-container">
                 <h2>Let's do this!</h2>
+                <p>* Required fields</p>
                 <div class="formgroup" id="first-name">
-                    <label for="first-name">First Name</label>
-                    <input type="text" name="first-name" class="input text">
+                    <label for="first-name">*First Name</label>
+                    <input type="text" name="first-name" class="input text" required>
                 </div>
                 <div class="formgroup" id="last-name">
                     <label for="last-name">Last Name</label>
                     <input type="text" name="last-name" class="input text">
                 </div>
                 <div class="formgroup" id="email">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" class="input email">
+                    <label for="email">*Email</label>
+                    <input type="email" name="email" class="input email" required>
                 </div>
                 <div class="formgroup" id="phone">
                     <label for="phone">Phone Number</label>
-                    <input type="number" name="phone" class="input phone">
+                    <input type="text" name="phone" class="input phone" maxlength="10"  pattern="{\d}*9">
                 </div>
                 <div class="formgroup" id="password">
-                    <label for="password">Password</label>
-                    <input type="password" name="password" class="input password" autocomplete="off">
+                    <label for="password">*Password</label>
+                    <input type="password" name="password" class="input password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" required>
                 </div>
                 
                 <div class="formgroup" id="conf-pass">
-                    <label for="conf-pass">Confirm Password</label>
-                    <input type="password" name="conf-pass" class="input conf-pass">
+                    <label for="conf-pass">*Confirm Password</label>
+                    <input type="password" name="conf-pass" class="input conf-pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" required>
                 </div>
+                <p id="requirements">Make sure your password contains at least 6 characters, 1 uppercase letter, 1 lowercase letter, and 1 number.</p>
             </div>
 
             <button type="submit">Create Account</button>
         </form>
-        <p>Already have an account? <a href="">Log in</a></p>
+        <p id="login">Already have an account? <a href="">Log in</a></p>
         <footer>
-            <p> Made by <a href="https://github.com/olkone">Oliver Konecny</a>, 2022  <a href="https://github.com/olkone/sign-up-form/"><img src="./images/GitHub-Mark-64px.png" alt="GitHub logo"></a>
+            <p id="foot-info">Made by <a href="https://github.com/olkone">Oliver Konecny</a>, 2022
             </p>
-           
+            <a href="https://github.com/olkone/sign-up-form/"><img src="./images/GitHub-Mark-64px.png" alt="GitHub logo"></a>
         </footer>
     </div>
 </body>
