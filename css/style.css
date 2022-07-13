@@ -38,12 +38,16 @@ body {
   flex-flow: row wrap;
   flex: 0;
   align-items: center;
-  gap: 10px;
+  gap: 0;
   justify-content: center;
   text-align: center;
 }
 .side #title h1 {
-  font-size: 2rem;
+  font-family: "Tangerine", cursive;
+  font-size: 7rem;
+  font-weight: 500;
+  padding: 10px;
+  margin: 0;
 }
 .side #title img {
   width: 80px;
@@ -75,6 +79,10 @@ body {
 }
 .form-section p:first-of-type {
   margin-top: 5%;
+}
+.form-section p span {
+  font-family: "Tangerine", cursive;
+  font-size: 3rem;
 }
 .form-section form {
   display: flex;
