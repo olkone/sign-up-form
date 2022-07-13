@@ -1,22 +1,24 @@
-body{
-    box-sizing: border-box;
+html,
+body {
+    min-height: 100%;
+    min-width: 100%;
+    margin: 0;
+    padding: 0;
+
     display: flex;
     flex: 1;
     flex-flow: row wrap;
-    height: 100vh;
-    width: 100vw;
-    margin: 0;
-    padding: 0;
 
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .section {
     display: flex;
-    flex: 1 1 0%;
-    flex-flow: column wrap;
-    position: relative;
-
+    flex-direction: column;
+    flex: 1 1 auto;
+    min-height: 70vh;
+    max-height: 100%;
+    width: 100%;
 }
 
 .side {
@@ -24,6 +26,7 @@ body{
     background-image: url(/images/background.jpg);
     background-size: cover;
     flex: 1 1 300px;
+    flex-flow: column wrap;
     justify-content: space-between;
 
     #title {
@@ -54,7 +57,7 @@ body{
     p, 
     a {
         color: rgba(255, 255, 255, 0.8);
-        font-size: 0.85rem;
+        font-size: 0.75rem;
         margin: 10px 0;
     }
 }
@@ -66,7 +69,6 @@ body{
     display: flex;
     flex: 2 2 400px;
     flex-flow: column nowrap;
-    gap: 20px;
     justify-content: space-between;
 
     p {
@@ -78,33 +80,30 @@ body{
     }
 
     p:first-of-type {
-        margin-top: 12%;
-    }
-
-    p:last-of-type, a {
-        color: darkslategrey;
-        font-size: max(0.75rem, 1rem);
-        font-weight: 200;
+        margin-top: 5%;
     }
 
     form {
+        display: flex;
+        flex: 0;
+        flex-flow: column nowrap;
 
         #input-container {
             background-color: white;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.171);
             padding: 2% 4%;
-            width: auto;
+            height: max-content;
 
             display: grid;
             grid-template-columns: repeat(2, min(350px, 48%));
-            grid-template-rows: repeat(4, 1fr);
+            grid-template-rows: repeat(5, max(50px, 20%));
             grid-column-gap: -30px;
             grid-row-gap: 5px;
 
             label,
             input {
                 display: block;
-                width: max(150px, 90%);
+                width: 90%;
             }
 
             label {
@@ -127,18 +126,32 @@ body{
 
             *:focus {
                 outline: none;
-                border: 2px solid rgb(147, 227, 151);
+                border: 2px solid rgb(166, 192, 243);
                 box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.304);
             }
 
-            .error {
-                border: 1px solid red;
+            :valid:focus:required {
+                border: 2px solid green;
+                
+            }
+        
+            :invalid:focus {
+                border: 2px solid red;
+             
             }
 
             h2 {
-                grid-area: 1 / 1 / 1 / 2;
+                grid-area: 1 / 1;
 
-                font-size: 1.4rem;
+                font-size: 1.2rem;
+                font-weight: 100;
+            }
+
+            p {
+                grid-area: 1 / 2;
+                
+                color:rgb(149, 149, 149);
+                font-size: 0.85rem;
                 font-weight: 100;
             }
 
@@ -165,13 +178,22 @@ body{
             #conf-pass {
                 grid-area: 4 / 2;
             }
+
+            #requirements {
+                grid-row: 5;
+                grid-column: span 2;
+                
+                font-size: 11px;
+            }
         }
 
         button {
             background-color: rgb(67, 112, 66);
             border: none;
             border-radius: 5px;
+
             color: white;
+            font-size: 0.9rem;
             margin: 20px 4%;
             height: 40px;
             width: 180px;
@@ -188,29 +210,41 @@ body{
         }
     }
 
+    #login, #login a{
+        color: darkslategrey;
+        font-size: 0.9rem;
+        font-weight: 200;
+    }
+
 }
 footer {
     align-items: center;
     display: flex;
-    flex: 1;
     flex-flow: row wrap;
+    flex: 0 1;
+    gap: 6px;
     justify-content: center;
-    margin: 0 auto;
+
+    padding: 0;
     width: 100%;
+    margin: 0 auto;
 
     font-family: 'Inconsolata', 'Courier New', Courier, monospace;
     
-    p,
-    a {
+    #foot-info {
         color: rgb(66, 109, 72);
-        font-size: 0.85rem;
-        margin: 10px 0;
-        text-align: center;
-        width: max-content;
-    }
+            font-size: 0.75rem;
+            margin: 10px 0;
+            text-align: center;
+            width: max-content;
 
+        a {
+            color: rgb(66, 109, 72);
+        }
+    }
+    
     img {
-        height: 20px;
+        height: 1.2rem;
         width: auto;
     }
 
