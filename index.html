@@ -10,15 +10,15 @@
 <body>
     <div class="section side">
         <div id="title">
-            <img src="./images/logo.png">
-            <h1>Awesome Web Service</h1>
+            <img src="./images/sword.png">
+            <h1>Action & Adventure</h1>
         </div>
-        <p>Photo by <a href="https://unsplash.com/es/@haliewestphoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Halie West</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+        <p><a></a>
         </p>
     </div>
     <div class="section form-section">
-        <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.<br><br>You <em>know</em> you want to.</p>
-        <form method="post">
+        <p><br><strong>This is not a real online service!</strong> <br><br>Sign up <em>now</em> to get started. Adventure awaits!</p>
+        <form action="./success.html" method="get"> <!--For a real web page, change method to "post"-->
             <div id="input-container">
                 <h2>Let's do this!</h2>
                 <p>* Required fields</p>
@@ -36,7 +36,7 @@
                 </div>
                 <div class="formgroup" id="phone">
                     <label for="phone">Phone Number</label>
-                    <input type="text" name="phone" class="input phone" maxlength="10"  pattern="{\d}*9">
+                    <input type="text" name="phone" class="input phone" maxlength="12"  pattern="\d{3}-\d{3}-\d{4}" placeholder="ex. 123-456-7890">
                 </div>
                 <div class="formgroup" id="password">
                     <label for="password">*Password</label>
@@ -52,7 +52,7 @@
 
             <button type="submit">Create Account</button>
         </form>
-        <p id="login">Already have an account? <a href="">Log in</a></p>
+        <p id="login">Already have an account? <a href="./success.html">Log in</a></p>
         <footer>
             <p id="foot-info">Made by <a href="https://github.com/olkone">Oliver Konecny</a>, 2022
             </p>
