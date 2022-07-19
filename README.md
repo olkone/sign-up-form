@@ -44,6 +44,9 @@ This sign-up form was created with HTML and SCSS as part of [The Odin Project](h
 * Admin Dashboard
     * [Live Page](https://olkone.github.io/admin-dashboard/)
     * [Repository](https://github.com/olkone/admin-dashboard)
+* Library
+    * [Live Page](https://olkone.github.io/library/)
+    * [Repository](https://github.com/olkone/library)
 * Sketch!
     * [Live Page](https://olkone.github.io/sketch/)
     * [Repository](https://github.com/olkone/sketch)
